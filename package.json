@@ -1,0 +1,30 @@
+{
+  "name": "js-string-format",
+  "version": "1.0.0",
+  "author": "Michael Dreibelbis <mike at belbis dot com>",
+  "homepage": "http://belbis.github.io/js-string-format/",
+  "repository": "https://github.com/belbis/js-string-format",
+  "keywords": [
+    "string",
+    "format",
+    "js",
+    "python"
+  ],
+  "scripts": {
+    "test": "mocha test/testStringFormat.js",
+    "browserify": "browserify test/testStringFormat.js | testling",
+    "b1": "browserify test/*.js -o test_bundle.js",
+    "coverage": "jscoverage src && SFORMAT_COV=1 mocha -R mocha-lcov-reporter test | coveralls",
+    "uglify": "uglifyjs dist/stringFormat.wrap.js -c -m -o dist/stringFormat.min.js",
+    "repl": "sed 's/module.exports/String.prototype.format/' src/stringFormat.js > dist/stringFormat.js",
+    "wrap": "(echo \"(function(){\"; cat dist/stringFormat.js; echo \"})();\") > dist/stringFormat.wrap.js",
+    "build": "npm test && npm run repl && npm run wrap && npm run uglify"
+  },
+  "devDependencies": {
+    "mocha": "2.2.4",
+    "mocha-lcov-reporter": "0.0.2",
+    "jscoverage": "0.5.9",
+    "uglify-js": "2.4.21",
+    "coveralls": "2.11.2"
+  }
+}
