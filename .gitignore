@@ -1,4 +1,5 @@
 src-cov/
 node_modules/
-.saucelabs
 .idea/
+.coveralls.yml
+.saucelabs
