@@ -1,4 +1,7 @@
 # js-string-format
+[![Build Status](https://travis-ci.org/belbis/js-string-format.svg?branch=master)](https://travis-ci.org/belbis/js-string-format)
+[![Coverage Status](https://coveralls.io/repos/belbis/js-string-format/badge.svg)](https://coveralls.io/r/belbis/js-string-format)
+
 
 extend String class with python-esque format function
 
@@ -12,12 +15,12 @@ in the usage section
 
 from git:
 
-```js
+```javascript
 npm install "git+https://github.com/belbis/js-string-format"
 ```
 
 node/iojs:
-```js
+```javascript
 npm install js-string-format
 ```
 
@@ -29,13 +32,13 @@ browser:
 ## usage
 
 import (node):
-```js
+```javascript
 require("js-string-format");
 ```
 
 
 use:
-```js
+```javascript
 
 // numerical
 var ret = 'The {0} {1} fox jumps over the {2} dog.'.format(
@@ -67,7 +70,7 @@ console.log(ret) // The quick brown fox jumps over the lazy dog.
 
 ## tests
 
-run ```js
+run ```javascript
 npm test```
 
 ## notes
