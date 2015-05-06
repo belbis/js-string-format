@@ -30,7 +30,7 @@ browser:
 
 import (node):
 ```js
-require("js-string-formatter");
+require("js-string-format");
 ```
 
 
